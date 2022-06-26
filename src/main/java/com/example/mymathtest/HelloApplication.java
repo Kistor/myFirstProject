@@ -8,16 +8,25 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+
+
     @Override
     public void start(Stage stage) throws IOException {
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 550, 440);
-        stage.setTitle("My math test! v0.0");
+        stage.setTitle("Сапер v0.1");
         stage.setScene(scene);
         stage.show();
     }
 
+
+
     public static void main(String[] args) {
+
         launch();
+        int[][] boxes = new int[10][10];
+
     }
 }
