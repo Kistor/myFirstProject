@@ -1,6 +1,7 @@
 package com.example.mymathtest;
 
 public class Map {
+    final  private int  bomb =9;
     int[][] map;
     int size;
     boolean[][] openMap;
@@ -43,40 +44,40 @@ public class Map {
             } else {
                 int x = coord % size;
                 int y = coord / size;
-                map[x][y] = 9;
+                map[x][y] = bomb;
 
                 // написать контроллер для краев карты(исключения?)
 
                 try {
-                    if(map[x+1][y+1] != 9)
+                    if(map[x+1][y+1] != bomb)
                         map[x+1][y+1]++;
                 } catch (Exception ignored) {}
                 try {
-                    if(map[x][y+1] != 9)
+                    if(map[x][y+1] != bomb)
                         map[x][y+1]++;
                 } catch (Exception ignored) {}
                 try {
-                    if(map[x+1][y] != 9)
+                    if(map[x+1][y] != bomb)
                         map[x+1][y]++;
                 } catch (Exception ignored) {}
                 try {
-                    if(map[x-1][y-1] != 9)
+                    if(map[x-1][y-1] != bomb)
                         map[x-1][y-1]++;
                 }catch (Exception ignored){}
                 try {
-                    if(map[x][y-1] != 9)
+                    if(map[x][y-1] != bomb)
                         map[x][y-1]++;
                 }catch (Exception ignored){}
                 try {
-                    if(map[x-1][y] != 9)
+                    if(map[x-1][y] != bomb)
                         map[x-1][y]++;
                 }catch (Exception ignored){}
                 try {
-                    if(map[x-1][y+1] != 9)
+                    if(map[x-1][y+1] != bomb)
                         map[x-1][y+1]++;
                 }catch (Exception ignored){}
                 try {
-                    if(map[x+1][y-1] != 9)
+                    if(map[x+1][y-1] != bomb)
                         map[x+1][y-1]++;
                 }catch (Exception ignored){}
 
