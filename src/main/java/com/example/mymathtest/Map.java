@@ -16,11 +16,14 @@ public class Map {
     }
 
 
+    public int GetNumBomb() {
+        return bomb;
+    }
     public void printMap()
     {
-        for (int[] ints : map) {
+        for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map.length; j++) {
-                System.out.print(ints[j] + " ");
+                System.out.print(map[j][i] + " ");
             }
             System.out.println();
         }
@@ -45,8 +48,6 @@ public class Map {
                 int x = coord % size;
                 int y = coord / size;
                 map[x][y] = bomb;
-
-                // написать контроллер для краев карты(исключения?)
 
                 try {
                     if(map[x+1][y+1] != bomb)
